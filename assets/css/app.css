@@ -1,1 +1,119 @@
-/* hello im css
+* {
+}
+
+body {
+  background-color: rgb(53, 50, 50);
+  color: rgb(48, 44, 44);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  font-weight: normal;
+  text-decoration-line: underline;
+  line-height: 1.5em;
+  margin: 0;
+}
+.pagehead {
+  background-image: url(http://i.ytimg.com/vi/JIJtCHuRXHw/maxresdefault.jpg);
+  width: 981px;
+  height: 180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pagetitle {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  color: rgb(226, 159, 82);
+}
+
+.topnav {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 17px;
+
+  color: rgb(179, 36, 36);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+.topnav a {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a.hover {
+  background-color: rgb(147, 101, 161);
+  color: rgb(173, 149, 236);
+}
+
+.topnav a.active {
+  background-color: #7368af;
+  color: rgb(172, 194, 241);
+}
+.box-1 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(98, 142, 207);
+  color: rgb(180, 186, 235);
+  boarder: 5px rgb(99, 137, 240);
+  boarder-style: dotted;
+  padding: 15px;
+  margin: 20px 15px;
+  border-radius: 15px;
+}
+.box-1 h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: underline;
+  text-transform: capitalize;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1em;
+}
+.box-1 h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: normal;
+  text-transform: capitalize;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1em;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+.button {
+  background-color: rgb(96, 88, 207);
+  color: rgb(47, 40, 78);
+  padding: 10px 15px;
+  boarder: 2px rgb(115, 115, 184);
+  boarder-radius: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.button:hover {
+  background-color: white;
+  color: rgb(96, 88, 207);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.my-form.form-group {
+  padding-bottom: 20px;
+}
+.my-form lable {
+}
+.my-form input[type="text"],
+.myform textarea {
+  padding: 8px;
+  width: 100%;
+}
+.footer {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(113, 110, 121);
+}
