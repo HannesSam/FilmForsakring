@@ -116,6 +116,7 @@ body {
   width: 100%;
 }
 .footer {
+  background-color: rgb(255, 199, 136);
   text-align: center;
   margin-bottom: 20px;
   color: rgb(113, 110, 121);
