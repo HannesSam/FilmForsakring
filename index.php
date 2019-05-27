@@ -18,6 +18,9 @@
         <a href="about.php">About</a>
         <a href="log_out.php">Log out</a>
     </div>
+    <div class="title"> 
+        <h1> Filmförsäkring.se </h1> 
+</div> 
     <div class="searchbar">
     <p>Testfunktion för sök mot api</p>
         <form>

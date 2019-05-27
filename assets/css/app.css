@@ -14,10 +14,7 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
 }
-.pagehead {
-  background-image: url(http://i.ytimg.com/vi/JIJtCHuRXHw/maxresdefault.jpg);
-  width: 981px;
-  height: 180px;
+.title {
   margin-left: auto;
   margin-right: auto;
 }
