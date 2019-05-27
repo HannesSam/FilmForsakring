@@ -3,8 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+<<<<<<< HEAD
+    <title>FilmFörsäkring TEST</title>
+=======
     <title>FilmFörsäkring</title>
     <script src="assets/js/jquery.js"></script>
+>>>>>>> 0120ce2fb4e96ffb986b61d68bb09e0b563a1fca
     <script src="assets/js/app.js"></script>
     <link rel="stylesheet" href="assets/css/app.css">
 </head>
