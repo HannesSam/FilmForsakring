@@ -19,8 +19,8 @@ body h1 {
   line-height: 1.5em;
 }
 .title {
-  position: center;
-  paddingleft: 10px;
+  position: relative;
+  width: 200px;
 }
 
 .topnav {
