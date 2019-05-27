@@ -3,13 +3,16 @@
 
 body {
   background-color: rgb(53, 50, 50);
-  color: rgb(48, 44, 44);
-  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(https://ak6.picdn.net/shutterstock/videos/7542676/thumb/1.jpg);
   font-size: 19px;
   font-weight: normal;
   text-decoration-line: underline;
   line-height: 1.5em;
   margin: 0;
+  color: rgb(255, 199, 136);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
 }
 .pagehead {
   background-image: url(http://i.ytimg.com/vi/JIJtCHuRXHw/maxresdefault.jpg);
@@ -18,20 +21,19 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-.pagetitle {
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
-  color: rgb(226, 159, 82);
-}
 
 .topnav {
-  float: left;
   text-align: center;
-  padding: 14px 16px;
+  padding: 30px 30px;
+  width: 75% !important;
+  margin: 0px auto;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 10px;
+  background-image: url(https://ak6.picdn.net/shutterstock/videos/7542676/thumb/1.jpg);
+  background-position: center;
 
+  width: max-content;
   color: rgb(179, 36, 36);
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
@@ -39,26 +41,25 @@ body {
 .topnav a {
   float: left;
   text-align: center;
-  padding: 14px 16px;
+  padding: 16px 16px;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   font-size: 17px;
 }
 
 .topnav a.hover {
-  background-color: rgb(147, 101, 161);
-  color: rgb(173, 149, 236);
+  background-color: rgb(204, 0, 17);
+  color: rgb(185, 185, 185);
 }
 
 .topnav a.active {
-  background-color: #7368af;
-  color: rgb(172, 194, 241);
+  color: rgb(122, 24, 24);
 }
 .box-1 {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(98, 142, 207);
-  color: rgb(180, 186, 235);
-  boarder: 5px rgb(99, 137, 240);
+  background-color: rgb(207, 98, 98);
+  color: rgb(235, 180, 180);
+  boarder: 5px rgb(240, 99, 99);
   boarder-style: dotted;
   padding: 15px;
   margin: 20px 15px;
@@ -90,17 +91,19 @@ body {
   margin: auto;
 }
 .button {
-  background-color: rgb(96, 88, 207);
+  background-color: rgb(148, 18, 18);
   color: rgb(47, 40, 78);
+  font-weight: bold;
   padding: 10px 15px;
-  boarder: 2px rgb(115, 115, 184);
+  boarder: 2px rgb(58, 15, 15);
   boarder-radius: 15px;
   font-family: Arial, Helvetica, sans-serif;
 }
 .button:hover {
   background-color: white;
-  color: rgb(96, 88, 207);
+  color: rgb(207, 88, 88);
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 .my-form.form-group {
   padding-bottom: 20px;
@@ -113,6 +116,7 @@ body {
   width: 100%;
 }
 .footer {
+  background-color: rgb(255, 199, 136);
   text-align: center;
   margin-bottom: 20px;
   color: rgb(113, 110, 121);
