@@ -13,14 +13,13 @@ body {
   font-weight: bold;
 }
 body h1 {
-  font-size: 19px;
+  font-size: 30px;
   font-weight: normal;
   text-decoration-line: underline;
   line-height: 1.5em;
 }
 .title {
-  position: relative;
-  width: 200px;
+  text-align: center;
 }
 
 .topnav {
@@ -55,13 +54,13 @@ body h1 {
 }
 .box-1 {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(207, 98, 98);
+  background-color: rgb(128, 21, 21);
   color: rgb(235, 180, 180);
   boarder: 5px rgb(240, 99, 99);
   boarder-style: dotted;
   padding: 15px;
-  margin: 20px 15px;
   border-radius: 15px;
+  text-align: center;
 }
 .box-1 h1 {
   font-family: Arial, Helvetica, sans-serif;
