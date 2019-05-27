@@ -121,3 +121,12 @@ body {
   margin-bottom: 20px;
   color: rgb(113, 110, 121);
 }
+
+.sokfilm {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
