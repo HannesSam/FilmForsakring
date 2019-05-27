@@ -4,7 +4,7 @@ class User
     public static function addUser($userName, $email, $password)
     {
 
-        if (CheckInput::valdiateNotEmpty($userName, $email, $password) && CheckInput::validateEmail($email) && self::checkIfExists($email)) {
+        if (CheckInput::valdiateNotEmpty($userName, $email, $password) && CheckInput::validateEmail($email) && self::checkIfExists($email) == false) {
             $salt1 = Authorizer::getSalt();
             $salt2 = Authorizer::getSalt();
             $hash = Authorizer::createHash($password, $salt1, $salt2);
@@ -15,12 +15,12 @@ class User
             $sql = "INSERT INTO users (userName, email, hash, salt1, salt2) VALUES ('$userName', '$email', '$hash', '$salt1', '$salt2')";
 
             if (Database::insertToDb($sql)) {
-                return true;
+                echo "User added";
             } else {
-                return false;
+                echo "Error when adding user";
             }
         } else {
-            return false;
+            echo "E-mail already in use, please login";
         }
     }
 
@@ -29,11 +29,10 @@ class User
         $email = Database::escapeString($email);
         $sql = "SELECT 1 FROM users WHERE email = '$email'";
         $result = Database::queryDb($sql);
-        $user = $result->fetch_assoc();
-        if ($user == null) {
-            return true;
-        } else {
+        if (mysqli_num_rows($result) == 0) {
             return false;
+        } else {
+            return true;
         }
     }
     public static function logIn($email, $password)
@@ -48,9 +47,9 @@ class User
         if (Authorizer::authenticateUser($password, $hash, $salt1, $salt2)) {
             session_start();
             $_SESSION["userID"] = $user["userID"];
-            return true;
+            echo "User logged in";
         } else {
-            return false;
+            echo "Not valid password/email";
         }
     }
     public static function getUserName($userID)
