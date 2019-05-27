@@ -143,7 +143,7 @@ function valideraPost() {
   }
 }
 
-//gör ingen validering så glöm inte att sätta required i the html
+//Fixa valedering för input!
 $(document).on("click", "#searchMovie", function() {
   var apiKey = "3ce6b720";
   var search = $("#searchInput").val();
