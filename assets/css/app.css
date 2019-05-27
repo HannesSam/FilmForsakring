@@ -23,18 +23,15 @@ body {
 }
 
 .topnav {
-  text-align: center;
-  padding: 30px 30px;
+  text-align: left;
+  padding: 5px 5px 5px 5pxpx;
   width: 75% !important;
   margin: 0px auto;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   font-size: 10px;
-  background-image: url(https://ak6.picdn.net/shutterstock/videos/7542676/thumb/1.jpg);
-  background-position: center;
-
   width: max-content;
-  color: rgb(179, 36, 36);
+  color: rgb(250, 219, 119);
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
 }
