@@ -156,4 +156,3 @@ $(document).on("click", "#searchMovie", function() {
 });
 
 //http://www.omdbapi.com/?apikey=3ce6b720&t=bambi&plot=full
-//http://www.omdbapi.com/?apikey=3ce6b720t=bambi&plot=full
