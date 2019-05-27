@@ -28,13 +28,9 @@
 </div> 
     <div class="searchbar">
         <form name="bar">
-<<<<<<< HEAD
             <input type="text" id="searchInput" placeholder="vilken film vill du söka på?" >
-            <br><button id="searchMovie" type="button">Search</button>
-=======
-            <input type="text" id="searchInput">
-            <br><button id="searchMovie" type="button">Search for film</button>
->>>>>>> 8687c9ccb78d6e31a1d50d86bcba5a799b87c8b8
+            <button class="button" id="searchMovie" type="button">Search</button>
+            
         </form>
     </div>
     
