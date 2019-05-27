@@ -142,3 +142,18 @@ function valideraPost() {
     return true;
   }
 }
+
+//gör ingen validering så glöm inte att sätta required i the html
+$(document).on("click", "#searchMovie", function() {
+  var apiKey = "3ce6b720";
+  var search = "bambi";
+  $.get(
+    "http://www.omdbapi.com/?apikey=" + apiKey + "&t=" + search + "&plot=full",
+    function(data) {
+      alert;
+    }
+  );
+});
+
+//http://www.omdbapi.com/?apikey=3ce6b720&t=bambi&plot=full
+//http://www.omdbapi.com/?apikey=3ce6b720t=bambi&plot=full
