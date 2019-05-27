@@ -150,9 +150,8 @@ $(document).on("click", "#searchMovie", function() {
   $.get(
     "http://www.omdbapi.com/?apikey=" + apiKey + "&t=" + search + "&plot=full",
     function(data) {
-      movieTitle;
-      $("#movieTitle").text(data.title);
-      $("#summary").text(data.plot);
+      $("#movieTitle").html(data.Title);
+      $("#summary").html(data.Plot);
     }
   );
 });
