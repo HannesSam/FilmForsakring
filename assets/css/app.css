@@ -87,6 +87,14 @@ body h1 {
   width: 80%;
   margin: auto;
 }
+
+.popUp {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(128, 21, 21);
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+}
 .button {
   background-color: rgb(250, 219, 119);
   color: rgb(78, 40, 40);
