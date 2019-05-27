@@ -146,11 +146,11 @@ function valideraPost() {
 //gör ingen validering så glöm inte att sätta required i the html
 $(document).on("click", "#searchMovie", function() {
   var apiKey = "3ce6b720";
-  var search = "bambi";
+  var search = $("#searchInput").val();
   $.get(
     "http://www.omdbapi.com/?apikey=" + apiKey + "&t=" + search + "&plot=full",
     function(data) {
-      alert;
+      alert(data.Plot);
     }
   );
 });

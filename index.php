@@ -24,6 +24,12 @@
         <a href="log_out.php">Log out</a>
     </div>
 
+    <p>Testfunktion för sök mot api</p>
+    <form>
+        <input type="text" id="searchInput">
+        <button id="searchMovie" type="button">Search</button>
+    </form>
+
 </body>
 
 </html>
