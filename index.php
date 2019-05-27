@@ -12,7 +12,7 @@
 
 <body>
     <div class="topnav">
-        <a class="active" href="home.php">Home</a>
+        <a class="active" href="index.php">Home</a>
         <a href="login.php">Log in</a>
         <a href="register.php">Register</a>
         <a href="forum.php">Forum</a>
