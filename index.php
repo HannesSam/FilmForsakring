@@ -25,7 +25,7 @@
     </div>
     <div class="searchbar">
     <p>Testfunktion för sök mot api</p>
-        <form name="sokfilm">
+        <form>
             <input type="text" id="searchInput">
             <br><button id="searchMovie" type="button">Search</button>
         </form>
