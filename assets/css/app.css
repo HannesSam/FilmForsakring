@@ -122,11 +122,10 @@ body {
   color: rgb(113, 110, 121);
 }
 
-.sokfilm {
+.searchbar {
   position: relative;
-  top: 46%;
-  width: 80%;
+  width: 100%;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 50px;
   margin: auto;
 }
