@@ -20,7 +20,7 @@ class Authorizer
 
     public static function getSalt()
     {
-        $charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        $charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/&%")(=?``^*´#"@';
         $randStringLen = 15;
 
         $randString = "";
