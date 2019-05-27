@@ -15,7 +15,7 @@
         <a class="active" href="home.php">Home</a>
         <a href="login.php">Log in</a>
         <a href="register.php">Register</a>
-        <a href="about.php">About</a>
+        <a href="forum.php">About</a>
         <a href="log_out.php">Log out</a>
     </div>
     <br>
