@@ -25,11 +25,12 @@
     </div>
     <div class="searchbar">
     <p>Testfunktion för sök mot api</p>
-        <form>
+        <form name="bar">
             <input type="text" id="searchInput">
             <br><button id="searchMovie" type="button">Search</button>
         </form>
     </div>
+    
 </body>
 
 </html>

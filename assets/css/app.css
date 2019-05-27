@@ -3,7 +3,8 @@
 
 body {
   background-color: rgb(53, 50, 50);
-  background-image: url(https://ak6.picdn.net/shutterstock/videos/7542676/thumb/1.jpg);
+  background-image: url(https://wallpaperplay.com/walls/full/b/a/4/140043.jpg);
+  background-size: 100%;
   font-size: 19px;
   font-weight: normal;
   text-decoration-line: underline;
@@ -127,4 +128,14 @@ body {
   text-align: center;
   margin-top: 50px;
   margin: auto;
+}
+.searchbar input{
+  height: 30px;
+  width: 500px;
+
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border:solid 1px black; 
+    padding:5px;
+
 }
