@@ -18,14 +18,18 @@
         <a href="about.php">About</a>
         <a href="log_out.php">Log out</a>
     </div>
+    <br>
+        <br>
+        <br>
+        <br>
     <div class="title"> 
-        <h1> Filmförsäkring.se </h1> 
+        <h1> Filmförsäkring </h1> 
+      
 </div> 
     <div class="searchbar">
-    <p>Testfunktion för sök mot api</p>
         <form name="bar">
             <input type="text" id="searchInput">
-            <br><button id="searchMovie" type="button">Search</button>
+            <br><button id="searchMovie" type="button">Search for film</button>
         </form>
     </div>
     
