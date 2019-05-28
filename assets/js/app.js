@@ -92,7 +92,7 @@ $(document).ready(function() {
         data
       ) {
         alert(data);
-        // location.reload();
+        window.location.href = "forum.php";
       });
     } else {
     }
