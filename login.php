@@ -11,13 +11,13 @@
 
 
 <body>
-    <div class="topnav">
-        <a href="index.php">Home</a>
-        <a class="active" href="login.php">Log in</a>
-        <a href="register.php">Register</a>
+<div class="topnav">
+        <a href="index.php">Hem</a>
+        <a href="login.php">Logga in</a>
+        <a class="active" href="register.php">Registrera dig</a>
         <a href="forum.php">Forum</a>
-        <a href="loggout.php">Log out</a>
-    </div>
+        <a href="loggout.php">Logga ut</a>
+</div>
     <br>
     <br>
     <br>
@@ -36,7 +36,12 @@
             <input type="submit" class="button" value="Submit">
         </form>
     </div>
-
+    <footer>
+        <div class="footer">
+            <h2> FilmFörsäkring AB </h2>
+            <h3> since 2019 </h3>
+        </div>
+    </footer>
 </body>
 
 </html>

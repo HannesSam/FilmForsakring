@@ -11,13 +11,13 @@
 
 
 <body>
-    <div class="topnav">
-        <a class="active" href="index.php">Home</a>
-        <a href="login.php">Log in</a>
-        <a href="register.php">Register</a>
+<div class="topnav">
+        <a href="index.php">Hem</a>
+        <a href="login.php">Logga in</a>
+        <a class="active" href="register.php">Registrera dig</a>
         <a href="forum.php">Forum</a>
-        <a href="log_out.php">Log out</a>
-    </div>
+        <a href="loggout.php">Logga ut</a>
+</div>
     <br>
     <br>
     <br>
