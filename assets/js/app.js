@@ -21,7 +21,7 @@ $(document).ready(function() {
 });
 
 //Validering och funktioner för registrering
-// $(this).children("#userNameRegister").val(),
+// $(this).children("#userNameRegister").val()
 $(document).on("click", "#submitRegister", function() {
   if (valideraRegister()) {
     $.post(
@@ -79,25 +79,23 @@ function valideraRegister() {
 //Validering och funktioner för log in
 $(document).ready(function() {
   $("#submitLogin").click(function() {
-    if (valideraLogin()) {
-      $.post(
-        "logginDB.php",
-        { password: $("#passwordLogin").val(), email: $("#emailLogin").val() },
-        function(data) {
-          location.reload();
-        }
-      );
+    var email = $("#emailLogin").val();
+    var password = $("#passwordLogin").val();
+    if (valideraLogin(email, password)) {
+      $.post("logginDB.php", { password: password, email: email }, function(
+        data
+      ) {
+        alert("Du är nu inlogad din lilla nörd!");
+        // location.reload();
+      });
     } else {
     }
   });
 });
 
-function valideraLogin() {
-  var email = $("#emailLogin").val();
+function valideraLogin(email, password) {
   email = email.trim();
-  var password = $("#passwordLogin").val();
   password = password.trim();
-
   if (email == "" || password == "") {
     alert("Vänligen fyll i alla fält");
     return false;

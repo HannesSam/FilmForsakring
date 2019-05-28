@@ -26,14 +26,14 @@
         <h1> Filmförsäkring logga in </h1>
     </div>
     <div class="box-1">
-        <form action="loginDB.php" method="get">
-            Email: <br>
-            <input type="text" placeholder="fyll i din email.."><br>
+        <form>
+            <label for="emailLogin">Email:</label> <br>
+            <input id="emailLogin" type="text" placeholder="fyll i din email.."><br>
             <br>
-            Lösenord: <br>
-            <input type="text" placeholder="fyll i ditt lösenord.."> <br>
+            <label for="passwordLogin">Lösenord:</label> <br>
+            <input id="passwordLogin" type="password" placeholder="fyll i ditt lösenord.."> <br>
             <br>
-            <input type="submit" class="button" value="Submit">
+            <input id="submitLogin" class="button" type="button" value="Logga in">
         </form>
     </div>
     <footer>
