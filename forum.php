@@ -49,8 +49,8 @@
             <input id="submitComment" class="button" type="button" value="skicka in">
      
         </form> 
-
     </div> 
+    <br> 
     <div class="box-1"> 
     <h2> Sök på en film för att se kommentarer om filmen </h2> 
 
