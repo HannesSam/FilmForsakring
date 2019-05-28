@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head> 
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
 <head>
     <meta charset="UTF-8">
     <title>FilmFörsäkring</title>
@@ -13,13 +15,13 @@
 
 
 <body>
-<div class="topnav">
+    <div class="topnav">
         <a href="index.php">Hem</a>
         <a href="login.php">Logga in</a>
         <a class="active" href="register.php">Registrera dig</a>
         <a href="forum.php">Forum</a>
         <a href="loggout.php">Logga ut</a>
-</div>
+    </div>
     <br>
     <br>
     <br>
@@ -29,14 +31,14 @@
 
     </div>
 
-    <div class="box-1"> 
-        <h1>skicka in en kommentar</h1> 
-   
+    <div class="box-1">
+        <h1>skicka in en kommentar</h1>
+
         <form>
-            <label for="filmtitel">Filmtitel:</label> <br>
+            <label for="movieTitle">Filmtitel:</label> <br>
             <input id="movieTitle" type="text" placeholder="skriv titel på filmen.."><br>
             <br>
-            <label for="Kommentar">Kommentar:</label> <br>
+            <label for="comment">Kommentar:</label> <br>
             <input id="comment" type="text" placeholder="Skriv kommentar.."> <br>
             <br>
 
@@ -45,24 +47,24 @@
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star"></span>
             <span class="fa fa-star"></span>
-            <br> 
+            <br>
             <input id="submitComment" class="button" type="button" value="skicka in">
-     
-        </form> 
 
-    </div> 
-    <div class="box-1"> 
-    <h2> Sök på en film för att se kommentarer om filmen </h2> 
+        </form>
 
-    <form name="bar">
+    </div>
+    <div class="box-1">
+        <h2> Sök på en film för att se kommentarer om filmen </h2>
+
+        <form name="bar">
             <input type="text" id="searchInput" placeholder="vilken film vill du söka på?">
             <button class="button" id="searchMovie" type="button">Search</button>
 
         </form>
 
-    </div> 
+    </div>
 
-    
+
 
     <footer>
         <div class="footer">
