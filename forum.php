@@ -15,13 +15,10 @@
 
 
 <body>
-    <div class="topnav">
-        <a href="index.php">Hem</a>
-        <a href="login.php">Logga in</a>
-        <a class="active" href="register.php">Registrera dig</a>
-        <a href="forum.php">Forum</a>
-        <a href="loggout.php">Logga ut</a>
-    </div>
+    <?php
+    include("include/topnav.php");
+    topnav();
+    ?>
     <br>
     <br>
     <br>
@@ -42,17 +39,46 @@
             <input id="comment" type="text" placeholder="Skriv kommentar.."> <br>
             <br>
 
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
+            <form class="rating">
+                <label>
+                    <input type="radio" name="stars" value="1" />
+                    <span class="icon">★</span>
+                </label>
+                <label>
+                    <input type="radio" name="stars" value="2" />
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                </label>
+                <label>
+                    <input type="radio" name="stars" value="3" />
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                </label>
+                <label>
+                    <input type="radio" name="stars" value="4" />
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                </label>
+                <label>
+                    <input type="radio" name="stars" value="5" />
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                    <span class="icon">★</span>
+                </label>
+            </form>
+            <br>
             <br>
             <input id="submitComment" class="button" type="button" value="skicka in">
 
         </form>
-
     </div>
+    <br>
+
     <div class="box-1">
         <h2> Sök på en film för att se kommentarer om filmen </h2>
 
