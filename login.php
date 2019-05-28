@@ -17,24 +17,26 @@
         <a href="register.php">Register</a>
         <a href="forum.php">Forum</a>
         <a href="loggout.php">Log out</a>
-<br> 
-<br>
-<br> 
-<br>
-        <div class="title"> 
-        <h1> Filmförsäkring  log in </h1> 
-        </div> 
-<div class="box-1"> 
-    <form action="loginDB.php" method="get"> 
-        Email: <br> 
-        <input type="text" placeholder="fyll i din email.." ><br> 
-        <br>   
-        Lösenord: <br> 
-        <input type="text" placeholder="fyll i ditt lösenord.." > <br>
-        <br>  
-        <input type="submit" class="button" value="Submit">
-</form> 
-</div> 
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="title">
+        <h1> Filmförsäkring log in </h1>
+    </div>
+    <div class="box-1">
+        <form action="loginDB.php" method="get">
+            Email: <br>
+            <input type="text" placeholder="fyll i din email.."><br>
+            <br>
+            Lösenord: <br>
+            <input type="text" placeholder="fyll i ditt lösenord.."> <br>
+            <br>
+            <input type="submit" class="button" value="Submit">
+        </form>
+    </div>
 
+</body>
 
-</html> 
+</html>
