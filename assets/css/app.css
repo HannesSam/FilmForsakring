@@ -59,13 +59,11 @@ body h1 {
   border: 5px rgb(240, 190, 52);
   border-style: dotted;
   padding: 15px;
+  width: 60%;
   border-radius: 25px;
   text-align: center;
-  <<<<<<<HEAD
   box-shadow: inset 1em 1em 1em rgb(59, 15, 15);
-  =======>>>>>>> 56aed11414554f67f291a636c1766c23d6e2cfaf
-  box-shadow: 10px -10px
-    5px rgba(0, 0, 0, 0.6);
+  box-shadow: 10px -10px 5px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 10px -10px 5px rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 10px -10px 5px rgba(0, 0, 0, 0.6);
   -o-box-shadow: 10px -10px 5px rgba(0, 0, 0, 0.6);
