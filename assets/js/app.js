@@ -148,14 +148,22 @@ function valideraPost(header, text) {
 $(document).on("click", "#searchMovie", function() {
   var apiKey = "3ce6b720";
   var search = $("#searchInput").val();
-  $.get(
-    "http://www.omdbapi.com/?apikey=" + apiKey + "&t=" + search + "&plot=full",
-    function(data) {
-      $("#popUp").show(500);
-      $("#movieTitle").html(data.Title);
-      $("#summary").html(data.Plot);
-    }
-  );
+  if (search == "") {
+    alert("Vänligen fyll i rutan");
+  } else {
+    $.get(
+      "http://www.omdbapi.com/?apikey=" +
+        apiKey +
+        "&t=" +
+        search +
+        "&plot=full",
+      function(data) {
+        $("#popUp").show(500);
+        $("#movieTitle").html(data.Title);
+        $("#summary").html(data.Plot);
+      }
+    );
+  }
 });
 
 //http://www.omdbapi.com/?apikey=3ce6b720&t=bambi&plot=full
