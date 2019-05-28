@@ -2,15 +2,15 @@
 class Authorizer
 {
 
-    public static function createHash($password, $salt1, $salt2)
+    public static function createHash($password, $salt)
     {
-        $hash = md5($salt1 . $password . $salt2);
+        $hash = md5($salt . $password);
         return $hash;
     }
 
-    public static function authenticateUser($password, $hash1, $salt1, $salt2)
+    public static function authenticateUser($password, $hash1, $salt)
     {
-        $hash2 = md5($salt1 . $password . $salt2);
+        $hash2 = md5($salt . $password);
         if ($hash1 === $hash2) {
             return true;
         } else {
