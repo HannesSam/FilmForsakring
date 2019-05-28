@@ -34,7 +34,7 @@
             <input id="movieTitle" type="text" placeholder="skriv titel på filmen.."><br>
             <br>
             <label for="Kommentar">Kommentar:</label> <br>
-            <input id="comment" type="text" placeholder="Skriv kommentar.."> <br>
+            <textarea id="comment" type="text" placeholder="Skriv kommentar.."> </textarea><br>
             <br>
 
             <form class="rating">
