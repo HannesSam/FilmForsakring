@@ -61,11 +61,11 @@ body h1 {
   padding: 15px;
   border-radius: 25px;
   text-align: center;
-<<<<<<< HEAD
+  <<<<<<<HEAD
   box-shadow: inset 1em 1em 1em rgb(59, 15, 15);
-=======
->>>>>>> 56aed11414554f67f291a636c1766c23d6e2cfaf
-  box-shadow: 10px -10px 5px rgba(0, 0, 0, 0.6);
+  =======>>>>>>> 56aed11414554f67f291a636c1766c23d6e2cfaf
+  box-shadow: 10px -10px
+    5px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 10px -10px 5px rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 10px -10px 5px rgba(0, 0, 0, 0.6);
   -o-box-shadow: 10px -10px 5px rgba(0, 0, 0, 0.6);
