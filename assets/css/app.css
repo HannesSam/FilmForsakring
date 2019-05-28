@@ -8,9 +8,8 @@ body {
   background-size: 100%;
   margin: 0;
   color: goldenrod;
-  font-fatu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubunweight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: bold;
 }
 body h1 {
   font-size: 30px;
@@ -24,19 +23,19 @@ body h1 {
 
 .topnav {
   text-align: left;
-  padding: 5px 5px 5px 5pxpx;
+  padding: 5px 5px 5px 5px;
   width: 75% !important;
   margin: 0px auto;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   font-size: 10px;
   width: max-content;
-  color: goldenrod; 
+  color: goldenrod;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
 }
 .topnav a {
-  color: rgb(218, 163, 26); 
+  color: rgb(218, 163, 26);
   float: left;
   text-align: center;
   padding: 16px 16px;
@@ -62,11 +61,10 @@ body h1 {
   padding: 15px;
   border-radius: 25px;
   text-align: center;
-  box-shadow: 10px -10px 5px  rgba(0,0,0,0.6);
-	-moz-box-shadow: 10px -10px 5px  rgba(0,0,0,0.6);
-	-webkit-box-shadow: 10px -10px 5px  rgba(0,0,0,0.6);
-	-o-box-shadow: 10px -10px 5px  rgba(0,0,0,0.6);
-
+  box-shadow: 10px -10px 5px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 10px -10px 5px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 10px -10px 5px rgba(0, 0, 0, 0.6);
+  -o-box-shadow: 10px -10px 5px rgba(0, 0, 0, 0.6);
 }
 .box-1 h1 {
   font-family: Arial, Helvetica, sans-serif;
@@ -101,11 +99,10 @@ body h1 {
   margin: 60px;
   border-radius: 15px;
   text-align: center;
-  box-shadow: inset 1em 1em 1em rgb(59, 15, 15); 
-
+  box-shadow: inset 1em 1em 1em rgb(59, 15, 15);
 }
 .button {
-  background-color:goldenrod;
+  background-color: goldenrod;
   color: rgb(78, 40, 40);
   font-weight: bold;
   padding: 10px 15px;
