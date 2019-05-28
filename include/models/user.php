@@ -32,6 +32,7 @@ class User
             return true;
         }
     }
+
     public static function logIn($email, $password)
     {
         $email = Database::escapeString($email);
