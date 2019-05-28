@@ -8,7 +8,7 @@ Databasen ska se ut såhär
 Databas:
 filmforsakring
 
-Table: namn->users
+Table namn->users:
 userID (AI, Primary key)
 email
 hash

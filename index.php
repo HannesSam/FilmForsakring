@@ -11,13 +11,11 @@
 
 
 <body>
-<div class="topnav">
-        <a class="active" href="index.php">Hem</a>
-        <a href="login.php">Logga in</a>
-        <a href="register.php">Registrera dig</a>
-        <a href="forum.php">Forum</a>
-        <a href="loggout.php">Logga ut</a>
-</div>
+    <?php
+    include("include/topnav.php");
+    topnav();
+    ?>
+
     <br>
     <br>
     <br>
