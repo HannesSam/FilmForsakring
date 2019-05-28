@@ -23,7 +23,7 @@
     <br>
     <br>
     <div class="title">
-        <h1> Filmförsäkring log in </h1>
+        <h1> Filmförsäkring logga in </h1>
     </div>
     <div class="box-1">
         <form>
