@@ -59,6 +59,9 @@ body h1 {
   border: 5px rgb(240, 190, 52);
   border-style: dotted;
   padding: 15px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 25px;
   text-align: center;
   box-shadow: inset 1em 1em 1em rgb(59, 15, 15);
