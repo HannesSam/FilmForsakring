@@ -92,7 +92,8 @@ $(document).ready(function() {
         data
       ) {
         alert(data);
-        // location.reload();
+        //denna funkar inte why?
+        window.location.href = "forum.php";
       });
     } else {
     }
