@@ -92,6 +92,7 @@ $(document).ready(function() {
         data
       ) {
         alert(data);
+        //denna funkar inte why?
         window.location.href = "forum.php";
       });
     } else {
