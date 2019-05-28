@@ -1,18 +1,15 @@
 <?php
 class User
 {
-    public static function addUser($userName, $email, $password)
+    public static function addUser($email, $password)
     {
 
-        if (CheckInput::valdiateNotEmpty($userName, $email, $password) && CheckInput::validateEmail($email) && self::checkIfExists($email) == false) {
-            $salt1 = Authorizer::getSalt();
-            $salt2 = Authorizer::getSalt();
-            $hash = Authorizer::createHash($password, $salt1, $salt2);
-            $userName = Database::escapeString($userName);
+        if (CheckInput::valdiateNotEmpty($email, $password) && CheckInput::validateEmail($email) && self::checkIfExists($email) == false) {
+            $salt = Authorizer::getSalt();
+            $hash = Authorizer::createHash($password, $salt);
             $email = Database::escapeString($email);
-            $salt1 = Database::escapeString($salt1);
-            $salt2 = Database::escapeString($salt2);
-            $sql = "INSERT INTO users (userName, email, hash, salt1, salt2) VALUES ('$userName', '$email', '$hash', '$salt1', '$salt2')";
+            $salt1 = Database::escapeString($salt);
+            $sql = "INSERT INTO users (email, hash, salt) VALUES ('$email', '$hash', '$salt')";
 
             if (Database::insertToDb($sql)) {
                 echo "User added";
@@ -38,13 +35,12 @@ class User
     public static function logIn($email, $password)
     {
         $email = Database::escapeString($email);
-        $sql = "SELECT userID, hash, salt1, salt2 FROM users WHERE email = '$email'";
+        $sql = "SELECT userID, hash, salt FROM users WHERE email = '$email'";
         $result = Database::queryDb($sql);
         $user = $result->fetch_assoc();
         $hash = $user["hash"];
-        $salt1 = $user["salt1"];
-        $salt2 = $user["salt2"];
-        if (Authorizer::authenticateUser($password, $hash, $salt1, $salt2)) {
+        $salt = $user["salt"];
+        if (Authorizer::authenticateUser($password, $hash, $salt)) {
             session_start();
             $_SESSION["userID"] = $user["userID"];
             echo "User logged in";
