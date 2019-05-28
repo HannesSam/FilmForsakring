@@ -1,20 +1,20 @@
-$(document).ready(function () {
-  $("#makePost").click(function () {
+$(document).ready(function() {
+  $("#makePost").click(function() {
     $("html, body")
       .animate({ scrollTop: 0 }, "slow")
       .promise()
-      .then(function () {
+      .then(function() {
         $("#makePostDiv").toggle(500);
       });
   });
 });
 
-$(document).ready(function () {
-  $("#register").click(function () {
+$(document).ready(function() {
+  $("#register").click(function() {
     $("html, body")
       .animate({ scrollTop: 0 }, "slow")
       .promise()
-      .then(function () {
+      .then(function() {
         $("#registerDiv").toggle(500);
       });
   });
@@ -22,7 +22,7 @@ $(document).ready(function () {
 
 //Validering och funktioner för registrering
 // $(this).children("#userNameRegister").val(),
-$(document).on("click", "#submitRegister", function () {
+$(document).on("click", "#submitRegister", function() {
   if (valideraRegister()) {
     $.post(
       "registerDB.php",
@@ -31,7 +31,7 @@ $(document).on("click", "#submitRegister", function () {
         email: $("#emailRegister").val(),
         password: $("#passwordRegister").val()
       },
-      function (data) {
+      function(data) {
         $("#registerFeedbackDiv").html(
           "<h3 id='feedbackText'>" + data + "</h3>"
         );
@@ -45,7 +45,7 @@ $(document).on("click", "#submitRegister", function () {
 
 function hideRegister() {
   $("#registerDiv").toggle(500);
-  setTimeout(function () {
+  setTimeout(function() {
     $("#registerDiv").load("include/views/_registerDiv.php");
   }, 500);
 }
@@ -77,13 +77,13 @@ function valideraRegister() {
 }
 
 //Validering och funktioner för log in
-$(document).ready(function () {
-  $("#submitLogin").click(function () {
+$(document).ready(function() {
+  $("#submitLogin").click(function() {
     if (valideraLogin()) {
       $.post(
         "logginDB.php",
         { password: $("#passwordLogin").val(), email: $("#emailLogin").val() },
-        function (data) {
+        function(data) {
           location.reload();
         }
       );
@@ -107,12 +107,12 @@ function valideraLogin() {
 }
 
 //validering och funktioner för make post
-$(document).on("click", "#submitPost", function () {
+$(document).on("click", "#submitPost", function() {
   if (valideraPost()) {
     $.post(
       "makePostDB.php",
       { header: $("#headerPost").val(), text: $("#textPost").val() },
-      function (data) {
+      function(data) {
         $("#containerForPosts").load("_post-list.php");
         $("#makePostDiv").html("<h3 id='feedbackText'>" + data + "</h3>");
         setTimeout(hideMakePost, 3500);
@@ -124,7 +124,7 @@ $(document).on("click", "#submitPost", function () {
 
 function hideMakePost() {
   $("#makePostDiv").toggle(500);
-  setTimeout(function () {
+  setTimeout(function() {
     $("#makePostDiv").load("include/views/_postDiv.php");
   }, 500);
 }
@@ -143,13 +143,13 @@ function valideraPost() {
   }
 }
 
-//gör ingen validering så glöm inte att sätta required i the html
-$(document).on("click", "#searchMovie", function () {
+//Fixa valedering för input!
+$(document).on("click", "#searchMovie", function() {
   var apiKey = "3ce6b720";
   var search = $("#searchInput").val();
   $.get(
     "http://www.omdbapi.com/?apikey=" + apiKey + "&t=" + search + "&plot=full",
-    function (data) {
+    function(data) {
       $("#movieTitle").html(data.Title);
       $("#summary").html(data.Plot);
     }
