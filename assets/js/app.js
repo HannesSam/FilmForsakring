@@ -32,18 +32,19 @@ $(document).on("click", "#sumbitRegister", function() {
     .find("#repeatRegister")
     .val();
 
-  if (valideraRegister(userName, email, password)) {
+  if (valideraRegister(email, password, passwordRepeat)) {
     $.post(
       "registerDB.php",
       {
         password: password,
-        userName: userName,
         email: email
       },
       function(data) {
+        alert(data);
+        /*
         $("#registerDiv").html("<h3 id='feedbackText'>" + data + "</h3>");
         $("#registerFeedbackDiv").toggle(50);
-        setTimeout(hideRegister, 3500);
+        setTimeout(hideRegister, 3500); */
       }
     );
   } else {
@@ -57,8 +58,8 @@ function hideRegister() {
   }, 500);
 }
 
-function valideraRegister(userName, email, password) {
-  if (userName == "" || email == "" || password == "") {
+function valideraRegister(email, password, passwordRepeat) {
+  if (passwordRepeat == "" || email == "" || password == "") {
     alert("Vänligen fyll i alla fält");
     return false;
   } else {
@@ -66,7 +67,12 @@ function valideraRegister(userName, email, password) {
       if (email.charAt(index) == "@") {
         for (let index2 = index; index2 < email.length; index2++) {
           if (email.charAt(index2) == ".") {
-            return true;
+            if (passwordRepeat == password) {
+              return true;
+            } else {
+              alert("Lösenorden mathcar inte");
+              return true;
+            }
           }
         }
       }
@@ -85,7 +91,7 @@ $(document).ready(function() {
       $.post("logginDB.php", { password: password, email: email }, function(
         data
       ) {
-        alert("Du är nu inlogad din lilla nörd!");
+        alert(data);
         // location.reload();
       });
     } else {
@@ -142,14 +148,22 @@ function valideraPost(header, text) {
 $(document).on("click", "#searchMovie", function() {
   var apiKey = "3ce6b720";
   var search = $("#searchInput").val();
-  $.get(
-    "http://www.omdbapi.com/?apikey=" + apiKey + "&t=" + search + "&plot=full",
-    function(data) {
-      $("#popUp").show(500);
-      $("#movieTitle").html(data.Title);
-      $("#summary").html(data.Plot);
-    }
-  );
+  if (search == "") {
+    alert("Vänligen fyll i rutan");
+  } else {
+    $.get(
+      "http://www.omdbapi.com/?apikey=" +
+        apiKey +
+        "&t=" +
+        search +
+        "&plot=full",
+      function(data) {
+        $("#popUp").show(500);
+        $("#movieTitle").html(data.Title);
+        $("#summary").html(data.Plot);
+      }
+    );
+  }
 });
 
 //http://www.omdbapi.com/?apikey=3ce6b720&t=bambi&plot=full

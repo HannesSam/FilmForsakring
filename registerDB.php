@@ -7,5 +7,4 @@ if (!isset($_POST["email"])) {
 
 $email = $_POST["email"];;
 $password = $_POST["password"];
-$userName = $_POST["userName"];
-User::addUser($userName, $email, $password);
+User::addUser($email, $password);

@@ -34,6 +34,7 @@
             <input id="repeatRegister" type="text" placeholder="fyll i lösenordet igen.."> <br>
             <br>
             <input id="sumbitRegister" type="button" class="button" value="Registrera">
+</form> 
     </div>
     <footer>
         <div class="footer">
