@@ -145,7 +145,7 @@ $(document).on("click", "#searchMovie", function() {
   $.get(
     "http://www.omdbapi.com/?apikey=" + apiKey + "&t=" + search + "&plot=full",
     function(data) {
-      $("#popUp").show();
+      $("#popUp").show(500);
       $("#movieTitle").html(data.Title);
       $("#summary").html(data.Plot);
     }
