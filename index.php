@@ -12,9 +12,9 @@
 
 <body>
 <div class="topnav">
-        <a href="index.php">Hem</a>
+        <a class="active" href="index.php">Hem</a>
         <a href="login.php">Logga in</a>
-        <a class="active" href="register.php">Registrera dig</a>
+        <a href="register.php">Registrera dig</a>
         <a href="forum.php">Forum</a>
         <a href="loggout.php">Logga ut</a>
 </div>
