@@ -5,7 +5,7 @@ class Database
 
     private static function connect()
     {
-        self::$conn = new mysqli('localhost', 'root', '', 'filmforsakring');
+        self::$conn = new mysqli('localhost', 'root', 'root', 'filmforsakring');
         if (self::$conn->connect_error) {
             die("Connection failed: " . self::$conn->connect_error);
         }
