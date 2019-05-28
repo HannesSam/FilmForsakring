@@ -3,6 +3,9 @@ class Database
 {
     private static $conn;
 
+    /* JESPERS new mysqli('localhost', 'root', '', 'filmforsakring'); */
+     /* ALLA ANDRAS new mysqli('localhost', 'root', 'root', 'filmforsakring', '3306'); */
+
     private static function connect()
     {
         self::$conn = new mysqli('localhost', 'root', 'root', 'filmforsakring', '3306');

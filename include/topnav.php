@@ -3,7 +3,7 @@
             
             session_start();    
 
-            if ( isset( $_SESSION['user'] ) ) 
+            if ( isset( $_SESSION['userID'] ) ) 
             {
                 echo '
                     <div class="topnav">
