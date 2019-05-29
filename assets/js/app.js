@@ -186,6 +186,7 @@ $(document).on("click keypress", "#searchMovie", function(e) {
 
 //http://www.omdbapi.com/?apikey=3ce6b720&t=bambi&plot=full
 
+//tar bort admin
 $(document).on("click", "#offadmin", function() {
   var user = $("#adminuser").text();
 
@@ -198,6 +199,7 @@ $(document).on("click", "#offadmin", function() {
   );
 });
 
+//Lägger till adming
 $(document).on("click", "#onadmin", function() {
   var user = $("#normaluser").text();
   $.post(
@@ -207,4 +209,14 @@ $(document).on("click", "#onadmin", function() {
       location.reload();
     }
   );
+});
+
+//tar bort review
+$(document).on("click", "#removeReview", function() {
+  var postID = $(this).val();
+  text();
+  $.post("removePost.php", { postID: postID }, function(data) {
+    alert(data);
+    //$(this).toggle();
+  });
 });
