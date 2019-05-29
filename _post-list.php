@@ -9,15 +9,15 @@ while ($row = $result->fetch_assoc()) {
     echo '<div class="popUp2"">
         <div class="reviewContainer">' .
 
-        ' < p > ' . $row["stars"] . ' < / p > ' .
+        '<p>' . $row["stars"] . '</p>' .
 
-        ' < p clas s ="review " >'
+        ' <p clas s ="review">'
         . $row["review"] .
-        ' < / p>  <b r>
+        ' </p>  <br>
 
-         <p cla s s="emai l">
-        Skrivet av: ' . $email['ema il'] .
-        ' < /p>  < br>
+         <p cla s s="email">
+        Skrivet av: ' . $email['email'] .
+        ' </p>  <br>
 
-          </d iv>   </d iv>';
+          </div>   </div>';
 }
