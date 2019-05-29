@@ -2,17 +2,17 @@
 class Post
 {
 
-    public static function addPost($userID, $header, $text)
+    public static function addPost($userID, $title, $review, $stars)
     {
-        if (CheckInput::valdiateNotEmpty($header, $text)) {
-            $header = Database::escapeString($header);
-            $text = Database::escapeString($text);
-            $sql = "INSERT INTO posts (userID, header, text) VALUES ('$userID', '$header', '$text')";
+        if (CheckInput::valdiateNotEmpty($title, $review)) {
+            $header = Database::escapeString($title);
+            $text = Database::escapeString($review);
+            $sql = "INSERT INTO reviews (userID, movieTitle, review, stars) VALUES ('$userID', '$title', '$review', '$stars')";
             if (Database::insertToDb($sql)) {
-                echo "Post added!";
+                echo "Review added!";
                 return;
             } else {
-                echo "Error when adding post to database";
+                echo "Error when adding Review to database";
                 return;
             }
         } else {
@@ -24,7 +24,7 @@ class Post
 
     public static function getPosts()
     {
-        $sql = "SELECT userID, header, text FROM posts";
+        $sql = "SELECT userID, title, review, stars FROM reviews";
         $result = Database::queryDb($sql);
         return $result;
     }
