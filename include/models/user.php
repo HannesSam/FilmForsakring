@@ -35,6 +35,7 @@ class User
 
     public static function logIn($email, $password)
     {
+        session_start();
         $email = Database::escapeString($email);
         $sql = "SELECT userID, hash, salt, admin FROM users WHERE email = '$email'";
         $result = Database::queryDb($sql);
@@ -46,11 +47,10 @@ class User
         if($admin == 1){
 
             $_SESSION["admin"] = $user["admin"];
-            echo "User logged in";
         }
         
         if (Authorizer::authenticateUser($password, $hash, $salt)) {
-            session_start();
+            
             $_SESSION["userID"] = $user["userID"];
             echo "User logged in";
         } else {
