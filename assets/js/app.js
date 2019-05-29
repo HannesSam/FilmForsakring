@@ -192,8 +192,8 @@ $(document).on("click", "#offadmin", function() {
   $.post(
     "changeAdmin.php",
     { userType: "0" /*Den userType vi vill ändra till*/, user: user },
-    function(data) {
-      window.location.href = "../admin.php";
+    function() {
+      location.reload();
     }
   );
 });
@@ -204,8 +204,8 @@ $(document).on("click", "#onadmin", function() {
   $.post(
     "changeAdmin.php",
     { userType: "1" /*Den userType vi vill ändra till*/, user: user },
-    function(data) {
-      window.location.href = "../admin.php";
+    function() {
+      location.reload();
     }
   );
 });
