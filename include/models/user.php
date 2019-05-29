@@ -44,13 +44,13 @@ class User
         $salt = $user["salt"];
         $admin = $user["admin"];
 
-        if($admin == 1){
+        if ($admin == 1) {
 
             $_SESSION["admin"] = $user["admin"];
         }
-        
+
         if (Authorizer::authenticateUser($password, $hash, $salt)) {
-            
+
             $_SESSION["userID"] = $user["userID"];
             echo "User logged in";
         } else {
@@ -64,5 +64,13 @@ class User
         $result = Database::queryDb($sql);
         $user = $result->fetch_assoc();
         return ($user);
+    }
+
+    public static function getAllUsers()
+    {
+        $sql = "SELECT email FROM users WHERE userID = '$userID'";
+        $result = Database::queryDb($sql);
+        $users = $result->fetch_assoc();
+        return ($users);
     }
 }
