@@ -31,12 +31,17 @@
 
         </form>
     </div>
-    <div id="popUp" class="popUp">
-        <h1 id="movieTitle"> </h1>
-        <p id="summary"> </p>
+    <div id="popUp">
+
+        <div class="popUp">
+            <h1 id="movieTitle"> </h1>
+            <p id="summary"> </p>
+        </div>
 
     </div>
+    <?php include '_post-list.php';
 
+    ?>
     <footer>
         <div class="footer">
             <h2> FilmFörsäkring AB </h2>
