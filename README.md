@@ -21,6 +21,3 @@ userID (foreign key)
 movieTitle
 review
 stars
-
-To do:
-admin kan skapa nya admins

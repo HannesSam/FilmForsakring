@@ -42,10 +42,7 @@
         </div>
     </div>
 
-
-    <?php include '_post-list.php';
-
-    ?>
+    
     <footer>
         <div class="footer">
             <h2> FilmFörsäkring AB </h2>
