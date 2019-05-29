@@ -31,14 +31,18 @@
 
         </form>
     </div>
-    <div id="popUp">
 
+    <div id="popUp">
         <div class="popUp">
             <h1 id="movieTitle"> </h1>
             <p id="summary"> </p>
         </div>
+        <div id="reviewsDiv">
 
+        </div>
     </div>
+
+
     <?php include '_post-list.php';
 
     ?>
