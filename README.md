@@ -13,3 +13,11 @@ userID (AI, Primary key)
 email
 hash
 salt
+admin (boolean)
+
+Table namn->reviews:
+reviewID (AI, primary key)
+userID (foreign key)
+movieTitle
+review
+stars
