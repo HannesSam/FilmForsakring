@@ -68,9 +68,10 @@ class User
 
     public static function getAllUsers()
     {
-        $sql = "SELECT email FROM users WHERE userID = '$userID'";
+        $sql = "SELECT email, admin FROM users";
         $result = Database::queryDb($sql);
-        $users = $result->fetch_assoc();
-        return ($users);
-    }
+        return ($result);
+        }
 }
+
+
