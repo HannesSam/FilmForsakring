@@ -200,7 +200,6 @@ $(document).on("click", "#offadmin", function() {
 
 $(document).on("click", "#onadmin", function() {
   var user = $("#normaluser").text();
-
   $.post(
     "changeAdmin.php",
     { userType: "1" /*Den userType vi vill ändra till*/, user: user },

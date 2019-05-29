@@ -42,9 +42,6 @@
         </div>
     </div>
 
-
-    <?php include '_post-list.php';
-
     ?>
     <footer>
         <div class="footer">
