@@ -1,14 +1,16 @@
 <?php
 require 'include/bootstrap.php';
-$result = Post::getPosts();
+
+$title = $_POST["title"];;
+$result = Post::getPosts($title);
 while ($row = $result->fetch_assoc()) {
     $userID = $row["userID"];
     $email =  User::getUserName($userID);
     echo '<div class="popUp"">
-        <div class="postContainer">
-        <h2 class="posts title">' . $row["title"] . '</h2> <br> <br>' .
-        $row["stars"] .
-        '<p class="posts userName">  <strong> Author: </strong> <i>' . $email['email'] . '</i> </p> <br>
-        <p class="posts text">'
+        <div class="reviewContainer">
+        <h2 class="title">' . $row["title"] . '</h2> <br> <br>' .
+        '<p>' . $row["stars"] . '</p>' .
+        '<p class="email">  Author:' . $email['email'] . '</p> <br>
+        <p class="review">'
         . $row["review"] . '</p> </div> </div>';
 }

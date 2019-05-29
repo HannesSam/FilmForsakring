@@ -22,9 +22,9 @@ class Post
         echo "Nått gick fel";
     }
 
-    public static function getPosts()
+    public static function getPosts($title)
     {
-        $sql = "SELECT userID, title, review, stars FROM reviews";
+        $sql = "SELECT userID, movieTitle, review, stars FROM reviews WHERE movieTitle = '$title'";
         $result = Database::queryDb($sql);
         return $result;
     }
