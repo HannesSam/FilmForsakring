@@ -31,12 +31,12 @@
     <div class="box-1">
         <h1>Vad tycker du om filmen?</h1>
 
-        <form>
+        <form id="reviewForm">
             <label for="movieTitle">Filmtitel:</label> <br>
             <input id="movieTitle" type="text" placeholder="skriv titel på filmen.."><br>
             <br>
-            <label for="comment">Kommentar:</label> <br>
-            <textarea id="comment" type="text" placeholder="Skriv kommentar.."> </textarea><br>
+            <label for="review">Kommentar:</label> <br>
+            <textarea id="review" type="text" placeholder="Skriv kommentar.."> </textarea><br>
             <br>
 
             <form class="rating">
@@ -73,7 +73,7 @@
             </form>
             <br>
             <br>
-            <input id="submitComment" class="button" type="button" value="skicka in">
+            <input id="submitReview" class="button" type="button" value="skicka in">
 
         </form>
     </div>

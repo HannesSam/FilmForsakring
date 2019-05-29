@@ -21,3 +21,8 @@ userID (foreign key)
 movieTitle
 review
 stars
+
+To do:
+se till att admin finns
+admin kan skapa nya admins
+recensioner ska visas på första sidan

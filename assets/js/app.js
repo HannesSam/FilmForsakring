@@ -113,19 +113,29 @@ function valideraLogin(email, password) {
 }
 
 //validering och funktioner för make post
-$(document).on("click", "#submitPost", function() {
-  var header = $("#makePostDiv")
-    .find("#headerPost")
+$(document).on("click", "#submitReview", function() {
+  var title = $("#reviewForm")
+    .find("#movieTitle")
     .val();
-  var text = $("#makePostDiv")
-    .find("#textPost")
+  var review = $("#reviewForm")
+    .find("#review")
     .val();
-  if (valideraPost(header, text)) {
-    $.post("makePostDB.php", { header: header, text: text }, function(data) {
-      $("#containerForPosts").load("postList.php");
-      $("#makePostDiv").html("<h3 id='feedbackText'>" + data + "</h3>");
-      setTimeout(hideMakePost, 3500);
-    });
+  var stars = 5; /*$("#reviewForm")
+    .find("#review")
+    .val(); */
+
+  if (valideraPost(title, review, stars)) {
+    $.post(
+      "makePostDB.php",
+      { title: title, review: review, stars: stars },
+      function(data) {
+        alert(data);
+        /*
+        $("#containerForPosts").load("postList.php");
+        $("#makePostDiv").html("<h3 id='feedbackText'>" + data + "</h3>");
+        setTimeout(hideMakePost, 3500); */
+      }
+    );
   } else {
   }
 });
