@@ -214,9 +214,8 @@ $(document).on("click", "#onadmin", function() {
 //tar bort review
 $(document).on("click", "#removeReview", function() {
   var postID = $(this).val();
-  text();
   $.post("removePost.php", { postID: postID }, function(data) {
-    alert(data);
-    //$(this).toggle();
+    $("searchMovie").trigger("click");
   });
 });
+//få denna att försvinna genom att kalla på sök igen
