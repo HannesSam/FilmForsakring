@@ -188,5 +188,22 @@ $(document).on("click keypress", "#searchMovie", function(e) {
 
 $(document).on("click", "#offadmin", function() {
   var user = $("#adminuser").text();
-  $.get("changeAdmin.php", { userType: "1", user: user }, function(data) {});
+
+  $.post(
+    "changeAdmin.php",
+    { userType: "0" /*Den userType vi vill ändra till*/, user: user },
+    function(data) {
+      window.location.href = "../admin.php";
+    }
+  );
+});
+
+$(document).on("click", "#offadmin", function() {
+  var user = $("#adminuser").text();
+
+  $.post(
+    "changeAdmin.php",
+    { userType: "0" /*Den userType vi vill ändra till*/, user: user },
+    function(data) {}
+  );
 });
