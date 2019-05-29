@@ -4,12 +4,11 @@ class Database
     private static $conn;
 
     /* JESPERS new mysqli('localhost', 'root', '', 'filmforsakring'); */
-     /* ALLA ANDRAS new mysqli('localhost', 'root', 'root', 'filmforsakring', '3306'); */
+    /* ALLA ANDRAS new mysqli('localhost', 'root', 'root', 'filmforsakring', '3306'); */
 
     private static function connect()
     {
         self::$conn = new mysqli('localhost', 'root', 'root', 'filmforsakring', '3306');
-        // För Hannes och Julia 'localhost', 'root', 'root', 'filmforsakring', '3306'
         if (self::$conn->connect_error) {
             die("Connection failed: " . self::$conn->connect_error);
         }
