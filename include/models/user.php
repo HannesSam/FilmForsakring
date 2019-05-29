@@ -72,6 +72,13 @@ class User
         $result = Database::queryDb($sql);
         return ($result);
         }
+
+        public static function changeAdmin($userType, $user)
+        {
+            $sql = "UPDATE users set admin = '$userType' Where email= '$user'";
+            $result = Database::queryDb($sql);
+            return ($result);
+         }
 }
 
 
