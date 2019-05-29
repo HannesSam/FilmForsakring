@@ -34,6 +34,7 @@
     <div id="popUp" class="popUp">
         <h1 id="movieTitle"> </h1>
         <p id="summary"> </p>
+
     </div>
 
     <footer>

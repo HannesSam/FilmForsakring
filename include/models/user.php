@@ -52,7 +52,7 @@ class User
     public static function getUserName($userID)
     {
         $userID = Database::escapeString($userID);
-        $sql = "SELECT userName FROM users WHERE userID = '$userID'";
+        $sql = "SELECT email FROM users WHERE userID = '$userID'";
         $result = Database::queryDb($sql);
         $user = $result->fetch_assoc();
         return ($user);
