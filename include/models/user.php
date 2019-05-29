@@ -46,7 +46,7 @@ class User
         if($admin == 1){
 
             $_SESSION["admin"] = $user["admin"];
-            echo "Admin logged in";
+            echo "User logged in";
         }
         
         if (Authorizer::authenticateUser($password, $hash, $salt)) {
