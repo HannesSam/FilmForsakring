@@ -29,7 +29,7 @@
     </div>
 
     <div class="box-1">
-        <h1>skicka in en kommentar</h1>
+        <h1>Vad tycker du om filmen?</h1>
 
         <form id="reviewForm">
             <label for="movieTitle">Filmtitel:</label> <br>
@@ -79,16 +79,7 @@
     </div>
     <br>
 
-    <div class="box-1">
-        <h2> Sök på en film för att se kommentarer om filmen </h2>
 
-        <form name="bar">
-            <input type="text" id="searchInput" placeholder="vilken film vill du söka på?">
-            <button class="button" id="searchMovie" type="button">Search</button>
-
-        </form>
-
-    </div>
 
 
 
