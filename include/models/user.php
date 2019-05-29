@@ -36,11 +36,19 @@ class User
     public static function logIn($email, $password)
     {
         $email = Database::escapeString($email);
-        $sql = "SELECT userID, hash, salt FROM users WHERE email = '$email'";
+        $sql = "SELECT userID, hash, salt, admin FROM users WHERE email = '$email'";
         $result = Database::queryDb($sql);
         $user = $result->fetch_assoc();
         $hash = $user["hash"];
         $salt = $user["salt"];
+        $admin = $user["admin"];
+
+        if($admin == 1){
+
+            $_SESSION["admin"] = $user["admin"];
+            echo "Admin logged in";
+        }
+        
         if (Authorizer::authenticateUser($password, $hash, $salt)) {
             session_start();
             $_SESSION["userID"] = $user["userID"];
