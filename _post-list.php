@@ -8,7 +8,7 @@ while ($row = $result->fetch_assoc()) {
     $email =  User::getUserName($userID);
     echo '<div class="popUp"">
         <div class="reviewContainer">
-        <h2 class="title">' . $row["title"] . '</h2> <br> <br>' .
+        <h2 class="title">' . $row["movieTitle"] . '</h2> <br> <br>' .
         '<p>' . $row["stars"] . '</p>' .
         '<p class="email">  Author:' . $email['email'] . '</p> <br>
         <p class="review">'
