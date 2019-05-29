@@ -27,9 +27,12 @@
         <h1> Admin </h1>
 
     </div>
-
     <div class="box-1">
-        
+    
+    <?php
+    include"getusers.php";
+    ?>
+    
     </div>
     <br>
 
