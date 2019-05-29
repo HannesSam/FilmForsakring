@@ -9,7 +9,7 @@ class User
             $hash = Authorizer::createHash($password, $salt);
             $email = Database::escapeString($email);
             $salt1 = Database::escapeString($salt);
-            $sql = "INSERT INTO users (email, hash, salt) VALUES ('$email', '$hash', '$salt')";
+            $sql = "INSERT INTO users (email, hash, salt, admin) VALUES ('$email', '$hash', '$salt', '0')";
 
             if (Database::insertToDb($sql)) {
                 echo "User added";
@@ -71,14 +71,12 @@ class User
         $sql = "SELECT email, admin FROM users";
         $result = Database::queryDb($sql);
         return ($result);
-        }
+    }
 
-        public static function changeAdmin($userType, $user)
-        {
-            $sql = "UPDATE users set admin = '$userType' Where email= '$user'";
-            $result = Database::queryDb($sql);
-            return ($result);
-         }
+    public static function changeAdmin($userType, $user)
+    {
+        $sql = "UPDATE users set admin = '$userType' Where email= '$user'";
+        $result = Database::queryDb($sql);
+        return ($result);
+    }
 }
-
-
