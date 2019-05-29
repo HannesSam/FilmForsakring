@@ -24,7 +24,7 @@
                 <tr>
                 <td id='adminuser'>".$row['email']."</td> 
                 <td>'Admin'</td> 
-                <td><button type='button' id='offadmin'>Change to normal user?</button></td>
+                <td><button class='button' type='button' id='offadmin'>Change to normal user?</button></td>
                 </tr>
                 </table>
                 ";
@@ -36,7 +36,7 @@
                 <tr>
                 <td id='normaluser'>".$row['email']."</td> 
                 <td>'Normal user'</td> 
-                <td><button type='button' id='onadmin'>Change to admin?</button></td>
+                <td><button class='button' type='button' id='onadmin'>Change to admin?</button></td>
                 </tr>
                 </table>
                 ";

@@ -28,4 +28,11 @@ class Post
         $result = Database::queryDb($sql);
         return $result;
     }
+    
+    public static function removepost($postID)
+    {
+        $sql = "DELETE FROM reviews WHERE  reviewID ='$postID';";
+        $result = Database::queryDb($sql);
+        return $result;
+    }
 }
