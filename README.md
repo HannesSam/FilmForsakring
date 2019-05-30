@@ -23,3 +23,5 @@ review
 stars (string)
 
 Konstig bugg med ändra admin
+ändra till små bokstäver på film titeltn
+fixa så att man kan klicka enter för att komma in
