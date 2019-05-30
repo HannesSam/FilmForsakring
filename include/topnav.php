@@ -8,7 +8,7 @@
                 echo '
                     <div class="topnav">
                     <a href="index.php">Hem</a>
-                    <a href="forum.php">Forum</a>
+                    <a href="forum.php">Recension</a>
                     <a href="admin.php">Admin</a>
                     <a href="loggout.php">Logga ut</a>
                 </div>';
@@ -19,7 +19,7 @@
                 echo '
                     <div class="topnav">
                     <a href="index.php">Hem</a>
-                    <a href="forum.php">Forum</a>
+                    <a href="forum.php">Recension</a>
                     <a href="loggout.php">Logga ut</a>
                 </div>';
             }
