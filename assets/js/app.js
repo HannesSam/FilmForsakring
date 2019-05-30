@@ -120,9 +120,8 @@ $(document).on("click", "#submitReview", function() {
   var review = $("#reviewForm")
     .find("#review")
     .val();
-  var stars = $("#stars")
-    .find("input:checked")
-    .val();
+  var stars = $("input:checked").val();
+
   if (valideraPost(title, review, stars)) {
     $.post(
       "makePostDB.php",
@@ -132,7 +131,7 @@ $(document).on("click", "#submitReview", function() {
         /*
         $("#containerForPosts").load("postList.php");
         $("#makePostDiv").html("<h3 id='feedbackText'>" + data + "</h3>");
-        setTimeout(hideMakePost, 3500); */
+        setTimeout(hideMakePost, 3500);   */
       }
     );
   } else {
