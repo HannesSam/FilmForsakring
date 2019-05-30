@@ -7,16 +7,19 @@ $result = Post::getPosts($title);
 while ($row = $result->fetch_assoc()) {
   $userID = $row["userID"];
   $email =  User::getUserName($userID);
+  $stars = $row["stars"];
 
   if ($_SESSION['admin'] == 1) {
 
-
     echo '<div class="popUp2"">
-          <div class="reviewContainer">' .
+          <div class="reviewContainer"> <p>';
 
-      '<p>' . $row["stars"] . '</p>' . ' 
-        
-          <p class ="review">' . $row["review"] . '</p>  
+    while ($stars > 0) {
+      echo  '<span class="icon">★</span>';
+      $stars--;
+    }
+    echo
+      '</p> <p class ="review">' . $row["review"] . '</p>  
           <br>
   
           <p class="email">
