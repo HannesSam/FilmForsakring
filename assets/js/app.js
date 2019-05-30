@@ -120,10 +120,9 @@ $(document).on("click", "#submitReview", function() {
   var review = $("#reviewForm")
     .find("#review")
     .val();
-  var stars = 5; /*$("#reviewForm")
-    .find("#review")
-    .val(); */
-
+  var stars = $("#stars")
+    .find("input:checked")
+    .val();
   if (valideraPost(title, review, stars)) {
     $.post(
       "makePostDB.php",

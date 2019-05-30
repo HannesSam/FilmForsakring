@@ -20,4 +20,4 @@ reviewID (AI, primary key)
 userID (foreign key)
 movieTitle
 review
-stars
+stars (string)

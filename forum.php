@@ -39,7 +39,7 @@
             <textarea id="review" type="text" placeholder="Skriv kommentar.."> </textarea><br>
             <br>
 
-            <form class="rating">
+            <form id="stars" class="rating">
                 <label>
                     <input type="radio" name="stars" value="1" />
                     <span class="icon">★</span>
