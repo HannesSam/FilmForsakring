@@ -5,11 +5,14 @@
         
         $result = User::getAllUsers();
         
+   
+       
         echo "
-        <table>
+        <table class= 'adminhead'>
         <tr>
         <th>Email</th>
-        <th>Access</th> 
+        <th>Access</th>
+        <th>Change?</th> 
         </tr>
         </table>
         ";
@@ -20,11 +23,11 @@
             {
 
                 echo "
-                <table>
+                <table class='adminbody'>
                 <tr>
                 <td id='adminuser'>".$row['email']."</td> 
                 <td>'Admin'</td> 
-                <td><button class='button' type='button' id='offadmin'>Change to normal user?</button></td>
+                <td><button class='button' type='button' id='offadmin'>Change to normal?</button></td>
                 </tr>
                 </table>
                 ";
@@ -32,7 +35,7 @@
             else 
             {
                 echo "
-                <table>
+                <table class='adminbody'>
                 <tr>
                 <td id='normaluser'>".$row['email']."</td> 
                 <td>'Normal user'</td> 

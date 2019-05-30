@@ -39,10 +39,6 @@
     </div>
     <br>
 
-
-
-
-
     <footer>
         <div class="footer">
             <h2> FilmFörsäkring AB </h2>
