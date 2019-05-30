@@ -16,11 +16,11 @@ while ($row = $result->fetch_assoc()) {
 
       '<p>' . $row["stars"] . '</p>' . ' 
         
-          <p class ="review">' . $row["review"] . ' </p>  
+          <p class ="review">' . $row["review"] . '</p>  
           <br>
   
           <p class="email">
-          Skrivet av: ' . $email['email'] . ' </p>
+          Skrivet av: ' . $email['email'] . '</p>
           <br>
           <button id="removeReview" class="button" type="button" value="' . $row["reviewID"] . '">Remove review?</button>
             </div>   
@@ -32,11 +32,11 @@ while ($row = $result->fetch_assoc()) {
 
       '<p>' . $row["stars"] . '</p>' . ' 
         
-          <p class ="review">' . $row["review"] . ' </p>  
+          <p class ="review">' . $row["review"] . '</p>  
           <br>
   
           <p class="email">
-          Skrivet av: ' . $email['email'] . ' </p>
+          Skrivet av: ' . $email['email'] . '</p>
           <br>
      
             </div>   

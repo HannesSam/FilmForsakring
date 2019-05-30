@@ -159,30 +159,34 @@ function valideraPost(header, text) {
 //Fixa valedering för input!
 //fixa så att enter funkar.
 $(document).on("click keypress", "#searchMovie", function(e) {
-  var search = $("#searchInput").val();
   if (e.which === 13 || e.type === "click") {
-    var apiKey = "3ce6b720";
-    if (search == "") {
-      alert("Vänligen fyll i rutan");
-    } else {
-      $.get(
-        "http://www.omdbapi.com/?apikey=" +
-          apiKey +
-          "&t=" +
-          search +
-          "&plot=full",
-        function(data) {
-          $("#popUp").show(500);
-          $("#movieTitle").html(data.Title);
-          $("#summary").html(data.Plot);
-        }
-      );
-      $.post("_post-list.php", { title: search }, function(data) {
-        $("#reviewsDiv").html(data);
-      });
-    }
+    displayreviews();
   }
 });
+
+function displayreviews() {
+  var search = $("#searchInput").val();
+  var apiKey = "3ce6b720";
+  if (search == "") {
+    alert("Vänligen fyll i rutan");
+  } else {
+    $.get(
+      "http://www.omdbapi.com/?apikey=" +
+        apiKey +
+        "&t=" +
+        search +
+        "&plot=full",
+      function(data) {
+        $("#popUp").show(500);
+        $("#movieTitle").html(data.Title);
+        $("#summary").html(data.Plot);
+      }
+    );
+    $.post("_post-list.php", { title: search }, function(data) {
+      $("#reviewsDiv").html(data);
+    });
+  }
+}
 
 //http://www.omdbapi.com/?apikey=3ce6b720&t=bambi&plot=full
 
@@ -215,7 +219,8 @@ $(document).on("click", "#onadmin", function() {
 $(document).on("click", "#removeReview", function() {
   var postID = $(this).val();
   $.post("removePost.php", { postID: postID }, function(data) {
-    $("searchMovie").trigger("click");
+    displayreviews();
   });
 });
+
 //få denna att försvinna genom att kalla på sök igen
