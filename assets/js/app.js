@@ -1,4 +1,4 @@
-// för registrering
+//Lyssnar efter klick på submit registrerings knappen och kör processen
 $(document).on("click", "#sumbitRegister", function() {
   var email = $("#registerDiv")
     .find("#emailRegister")
@@ -29,14 +29,7 @@ $(document).on("click", "#sumbitRegister", function() {
   }
 });
 
-function hideRegister() {
-  $("#registerDiv").toggle(500);
-  setTimeout(function() {
-    $("#registerDiv").load("include/views/_registerDiv.php");
-  }, 500);
-}
-
-//Funktioner för log in
+//Lyssnar efter klick på login knappen och kör processen
 $(document).ready(function() {
   $("#submitLogin").click(function() {
     var email = $("#emailLogin").val();
@@ -55,7 +48,7 @@ $(document).ready(function() {
   });
 });
 
-//Funktioner för make post
+//Lyssnar efter klick på submit recensioner knappen och kör processen
 $(document).on("click", "#submitReview", function() {
   var title = $("#reviewForm")
     .find("#movieTitle")
@@ -77,21 +70,14 @@ $(document).on("click", "#submitReview", function() {
   }
 });
 
-function hideMakePost() {
-  $("#makePostDiv").toggle(500);
-  setTimeout(function() {
-    $("#makePostDiv").load("include/views/_postDiv.php");
-  }, 500);
-}
-
-//fixa så att enter funkar.
+//Lyssnar efter klick på sök knappen och kör processen
 $(document).on("click keypress", "#searchMovie", function(e) {
   if (e.which === 13 || e.type === "click") {
     displayreviews();
   }
 });
 
-//tar bort admin
+//Lyssnar efter klick på ta bort admin knappen och kör processen
 $(document).on("click", "#offadmin", function() {
   var user = $("#adminuser").text();
 
@@ -104,7 +90,7 @@ $(document).on("click", "#offadmin", function() {
   );
 });
 
-//Lägger till admin
+//Lyssnar efter klick på lägg till admin knappen och kör processen
 $(document).on("click", "#onadmin", function() {
   var user = $("#normaluser").text();
   $.post(
@@ -116,7 +102,7 @@ $(document).on("click", "#onadmin", function() {
   );
 });
 
-//tar bort review
+//Lyssnar efter klick på ta bort recension knappen och kör processen
 $(document).on("click", "#removeReview", function() {
   var postID = $(this).val();
   $.post("removePost.php", { postID: postID }, function(data) {
@@ -124,6 +110,7 @@ $(document).on("click", "#removeReview", function() {
   });
 });
 
+//Funktion för att validera input
 function valideraInput(input) {
   input = input.trim();
   if (input !== "") {
@@ -134,6 +121,7 @@ function valideraInput(input) {
   }
 }
 
+//Funktion för att validera email
 function valideraEmail(email) {
   for (let index = 0; index < email.length; index++) {
     if (email.charAt(index) == "@") {
@@ -148,6 +136,7 @@ function valideraEmail(email) {
   return false;
 }
 
+//Funktion för att displaya alla recensioner
 function displayreviews() {
   var search = $("#searchInput").val();
   var apiKey = "3ce6b720";
