@@ -190,3 +190,24 @@ textarea {
   border-radius: 15px;
   text-align: center;
 }
+
+.adminhead {
+  
+  text-align: center;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  
+
+}
+
+.adminbody {
+  
+  text-align: center;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+ 
+ 
+}
+
