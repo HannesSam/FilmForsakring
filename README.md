@@ -21,3 +21,5 @@ userID (foreign key)
 movieTitle
 review
 stars (string)
+
+Konstig bugg med ändra admin
