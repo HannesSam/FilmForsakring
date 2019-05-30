@@ -1,4 +1,5 @@
 <?php 
+
         function topnav(){
             
             session_start();    
@@ -7,10 +8,10 @@
 
                 echo '
                     <div class="topnav">
-                    <a href="index.php">Hem</a>
-                    <a href="forum.php">Forum</a>
-                    <a href="admin.php">Admin</a>
-                    <a href="loggout.php">Logga ut</a>
+                    <a href="index.php">  Hem <i class="fas fa-search"></i></a>
+                    <a href="forum.php">Forum <i class="far fa-edit"></i></a>
+                    <a href="admin.php">Admin <i class="fas fa-user-shield"></i></a>
+                    <a href="loggout.php">Logga ut <i class="fas fa-sign-out-alt"></i></a>
                 </div>';
             }
             
@@ -18,18 +19,18 @@
             {
                 echo '
                     <div class="topnav">
-                    <a href="index.php">Hem</a>
-                    <a href="forum.php">Forum</a>
-                    <a href="loggout.php">Logga ut</a>
+                    <a href="index.php">  Hem <i class="fas fa-search"></i></a>
+                    <a href="forum.php">Forum <i class="far fa-edit"></i></a>
+                    <a href="loggout.php">Logga ut <i class="fas fa-sign-out-alt"></i></a>
                 </div>';
             }
             else 
             {
                  echo '
                     <div class="topnav">
-                    <a href="index.php">Hem</a>
-                    <a href="register.php">Registrera dig</a>
-                    <a href="login.php">Logga in</a>
+                    <a href="index.php">  Hem <i class="fas fa-search"></i></a>
+                    <a href="register.php">Registrera dig <i class="fas fa-user-edit"></i></a>
+                    <a href="login.php">Logga in <i class="fas fa-sign-in-alt"></i></a>
                 </div>';
             }
 
