@@ -24,14 +24,14 @@ class Post
 
     public static function getPosts($title)
     {
-        $sql = "SELECT userID, movieTitle, review, stars FROM reviews WHERE movieTitle = '$title'";
+        $sql = "SELECT reviewID, userID, movieTitle, review, stars FROM reviews WHERE movieTitle = '$title'";
         $result = Database::queryDb($sql);
         return $result;
     }
     
     public static function removePost($postID)
     {
-        $sql = "DELETE FROM reviews WHERE  reviewID ='$postID';";
+        $sql = "DELETE FROM reviews WHERE  reviewID ='$reviewID';";
         $result = Database::queryDb($sql);
         return $result;
     }
