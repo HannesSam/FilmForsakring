@@ -24,7 +24,7 @@
     <br>
     <br>
     <div class="title">
-        <h1> Forum </h1>
+        <h1> Recension </h1>
 
     </div>
 
