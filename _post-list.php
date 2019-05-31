@@ -31,11 +31,14 @@ while ($row = $result->fetch_assoc()) {
   } else {
 
     echo '<div class="popUp2"">
-          <div class="reviewContainer">' .
+          <div class="reviewContainer"> <p>';
 
-      '<p>' . $row["stars"] . '</p>' . ' 
-        
-          <p class ="review">' . $row["review"] . '</p>  
+    while ($stars > 0) {
+      echo  '<span class="icon">★</span>';
+      $stars--;
+    }
+    echo
+      '</p> <p class ="review">' . $row["review"] . '</p>  
           <br>
   
           <p class="email">
